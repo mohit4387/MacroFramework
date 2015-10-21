@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="10457" started-at="2015-10-20T13:34:06Z" finished-at="2015-10-20T13:34:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="10457" started-at="2015-10-20T13:34:06Z" finished-at="2015-10-20T13:34:17Z">
+      <class name="tests.SmokeTests">
+        <test-method status="PASS" signature="before()[pri:0, instance:tests.SmokeTests@7cf10a6f]" name="before" is-config="true" duration-ms="7731" started-at="2015-10-20T19:04:06Z" finished-at="2015-10-20T19:04:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="verifyCopyrightMessage()[pri:0, instance:tests.SmokeTests@7cf10a6f]" name="verifyCopyrightMessage" duration-ms="1655" started-at="2015-10-20T19:04:14Z" finished-at="2015-10-20T19:04:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCopyrightMessage -->
+        <test-method status="PASS" signature="verifyVersion()[pri:0, instance:tests.SmokeTests@7cf10a6f]" name="verifyVersion" duration-ms="78" started-at="2015-10-20T19:04:16Z" finished-at="2015-10-20T19:04:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyVersion -->
+        <test-method status="PASS" signature="after()[pri:0, instance:tests.SmokeTests@7cf10a6f]" name="after" is-config="true" duration-ms="961" started-at="2015-10-20T19:04:16Z" finished-at="2015-10-20T19:04:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- tests.SmokeTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
