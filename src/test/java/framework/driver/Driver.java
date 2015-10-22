@@ -2,6 +2,7 @@ package framework.driver;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -26,6 +27,9 @@ public class Driver
 			driver = new ChromeDriver();
 		}
 		
+		long time = Long.valueOf(ConfigFile.getValue("implicittimeout")).longValue();
+		driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
+		
 		driver.get(ConfigFile.getValue("url"));
 		ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(newTab.get(1));
@@ -42,7 +46,7 @@ public class Driver
 		String pageTitle = driver.getTitle();
 		if(pageTitle.equalsIgnoreCase("MACRO Database Choice") || pageTitle.equalsIgnoreCase("MACRO Data Management"))
 		{
-			return true;
+			//return true;
 		}
 	}
 	

@@ -1,7 +1,10 @@
 package framework.Pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 
+import framework.ConfigFile;
 import framework.driver.Driver;
 
 public class LoginPage extends Driver
@@ -20,6 +23,11 @@ public class LoginPage extends Driver
 		return copyright;
 	}
 	
-	public static
+	public static void login() throws IOException
+	{
+		driver.findElement(By.id("txtUserId")).sendKeys(ConfigFile.getValue("username"));
+		driver.findElement(By.id("txtPassword")).sendKeys(ConfigFile.getValue("password"));
+		driver.findElement(By.id("btnLogin")).click();
+	}
 
 }

@@ -9,12 +9,12 @@ import framework.ConfigFile;
 import framework.Pages.LoginPage;
 import framework.driver.Driver;
 
-public class SmokeTests
+public class LoginPageSmokeTests extends Driver
 {
 	@BeforeTest
 	public void before() throws IOException
 	{
-		Driver.intialise();
+		Driver.intialise();		
 	}
 	
 	@AfterTest
@@ -35,6 +35,16 @@ public class SmokeTests
 		Assert.assertEquals(LoginPage.getCopyrightMessage(), ConfigFile.getValue("copyrightmessage"));
 	}
 	
+	@Test
+	public void forgotPassword()
+	{
+		//To do
+	}
 	
-
+	@Test
+	public void loginFunction() throws IOException
+	{
+		LoginPage.login();
+		Assert.assertEquals(driver.getTitle(), "MACRO DATA MANAGEMENT");		
+	}
 }
